@@ -1,0 +1,80 @@
+/* Styles used only by klub.html. */
+.club-history-page { padding-top: 64px; }
+.club-history-page *, .history-lightbox * { box-sizing: border-box; }
+.club-history-page [id] { scroll-margin-top: 145px; }
+.history-intro { padding: 0 0 32px; }
+.history-eyebrow { margin: 0 0 12px; color: #e8a4b6; font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.history-intro h1 { font-size: clamp(36px, 5.8vw, 60px); line-height: 1.1; letter-spacing: -.035em; text-transform: none; }
+.history-intro h1 span { color: #e5a6b7; }
+.history-lead { max-width: 630px; margin: 22px 0 24px; color: #d0c7cd; font-size: 16px; line-height: 1.8; }
+.history-jump-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.history-jump-links a { display: inline-flex; align-items: center; min-height: 42px; padding: 8px 14px; border: 1px solid #79505e; border-radius: 5px; color: #f3eaf0; font-size: 13px; text-decoration: none; }
+.history-jump-links a:hover { background: #52303c; }
+.history-cover, .history-photo { min-width: 0; margin: 0; overflow: hidden; border: 1px solid #ffffff1a; border-radius: 8px; background: #25242a; }
+.history-photo-link { position: relative; display: block; background: #141417; }
+.history-photo-link img { display: block; width: 100%; height: auto; }
+.history-photo-link:focus-visible { outline-offset: -4px; }
+.history-enlarge { position: absolute; right: 12px; bottom: 12px; padding: 5px 9px; border-radius: 4px; background: #111d; color: #fff; font-size: 11px; }
+.history-cover figcaption, .history-photo figcaption { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; padding: 18px 20px; }
+.history-photo-year { color: #eba8bb; font-size: 12px; font-weight: 700; letter-spacing: .06em; }
+.history-cover figcaption strong, .history-photo figcaption strong { font-size: 17px; line-height: 1.4; }
+.history-cover figcaption p, .history-photo figcaption p { margin: 0; color: #c5bbc1; font-size: 13px; line-height: 1.6; }
+.club-history-page .history-section { margin-top: 56px; padding: 0; background: none; border: 0; border-radius: 0; }
+.history-section h2 { margin: 0 0 26px; font-size: clamp(26px, 4vw, 34px); line-height: 1.2; letter-spacing: -.025em; }
+.history-timeline { margin: 0; padding: 0; list-style: none; }
+.history-timeline li { position: relative; display: grid; grid-template-columns: 145px minmax(0, 1fr); gap: 24px; padding: 22px 0 26px 20px; border-left: 2px solid #754351; }
+.history-timeline li::before { content: ''; position: absolute; left: -6px; top: 29px; width: 10px; height: 10px; border-radius: 50%; background: #db6685; box-shadow: 0 0 0 5px #202124; }
+.history-year { color: #edafbf; font-size: 17px; font-weight: 700; line-height: 1.4; }
+.history-timeline h3 { margin: 0 0 7px; font-size: 20px; line-height: 1.35; }
+.history-timeline p { max-width: 580px; margin: 0; color: #c8bfc5; font-size: 14px; line-height: 1.75; }
+.history-international { margin-top: 28px; padding: 24px; border-radius: 8px; background: #2c252c; border: 1px solid #65404e; }
+.history-international h3 { margin: 0 0 10px; font-size: 21px; }
+.history-international p { margin: 0 0 10px; color: #d0c5cc; font-size: 14px; line-height: 1.8; }
+.history-international p:last-child { margin-bottom: 0; }
+.history-honours { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.history-honour { padding: 24px; border-radius: 8px; border: 1px solid #ffffff1a; background: #29282d; }
+.history-honour-gold { grid-column: 1 / -1; background: linear-gradient(120deg, #442e31, #29262c); border-color: #a5834c; }
+.history-honour-label { color: #e3a9bb; font-size: 11px; font-weight: bold; letter-spacing: .12em; }
+.history-honour-gold .history-honour-label { color: #ecd39b; }
+.history-honour h3 { margin: 8px 0; font-size: 22px; line-height: 1.25; }
+.history-honour p { margin: 0; color: #cdc1c8; font-size: 13px; line-height: 1.7; }
+.history-gallery-help { margin: -14px 0 24px; color: #b9aeb5; font-size: 13px; }
+.history-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.history-gallery .history-photo-link { aspect-ratio: 4 / 3; }
+.history-gallery img { width: 100%; height: 100%; object-fit: contain; }
+.history-logos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.history-logos figure { margin: 0; }
+.history-logo-frame { display: grid; place-items: center; aspect-ratio: 4 / 3; border: 1px solid #ffffff1a; border-radius: 8px; background: #17171b; overflow: hidden; }
+.history-logo-original { background: #fff; }
+.history-logo-frame img { width: 75%; height: 90%; object-fit: contain; }
+.history-logos figcaption { margin-top: 10px; color: #d3c7cf; font-size: 13px; text-align: center; }
+body.history-photo-open { overflow: hidden; }
+.history-lightbox { box-sizing: border-box; width: min(1200px, calc(100% - 24px)); max-height: calc(100dvh - 24px); padding: 0; border: 1px solid #805065; border-radius: 10px; background: #161519; color: #fff; overflow: auto; overscroll-behavior: contain; }
+.history-lightbox::backdrop { background: #000e; }
+.history-lightbox-inner { position: relative; padding: 14px; }
+.history-lightbox #history-lightbox-image { display: block; width: 100%; height: min(68dvh, 800px); object-fit: contain; background: #0d0d10; }
+.history-lightbox button { display: grid; place-items: center; min-width: 44px; min-height: 44px; padding: 8px; border: 1px solid #8d6677; border-radius: 5px; background: #30222b; color: #fff; font: inherit; font-size: 22px; cursor: pointer; }
+.history-lightbox .history-lightbox-close { position: absolute; top: 22px; right: 22px; z-index: 1; border-radius: 50%; background: #17141beb; }
+.history-lightbox-footer { display: grid; grid-template-columns: 44px minmax(0, 1fr) 44px; align-items: center; gap: 16px; margin-top: 14px; }
+.history-lightbox-footer p { margin: 0; color: #e6dce3; font-size: 13px; line-height: 1.5; text-align: center; overflow-wrap: anywhere; }
+.history-photo-counter { margin: 8px 0 0; color: #bdaab5; font-size: 11px; text-align: center; }
+@media (max-width: 600px) {
+  .club-history-page { padding-top: 46px; }
+  .history-lead { font-size: 14px; line-height: 1.75; }
+  .history-intro { padding-bottom: 24px; }
+  .history-jump-links { gap: 6px; }
+  .history-jump-links a { padding: 8px 10px; font-size: 12px; }
+  .club-history-page .history-section { margin-top: 40px; }
+  .history-timeline li { grid-template-columns: 1fr; gap: 7px; padding: 18px 0 22px 20px; }
+  .history-timeline li::before { top: 24px; }
+  .history-year { font-size: 14px; }
+  .history-timeline h3 { font-size: 19px; }
+  .history-honours, .history-gallery { grid-template-columns: 1fr; }
+  .history-honour { padding: 20px; }
+  .history-cover figcaption, .history-photo figcaption { padding: 16px; }
+  .history-logos { gap: 12px; }
+  .history-logos figcaption { font-size: 12px; }
+  .history-lightbox-inner { padding: 8px; }
+  .history-lightbox-footer { gap: 8px; }
+  .history-lightbox-footer p { font-size: 12px; }
+}

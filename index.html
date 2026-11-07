@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berkut Praha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="page-loader" class="page-loader" aria-hidden="true" hidden>
+  <div class="loader-emblem">
+    <span class="loader-ring loader-ring-outer"></span>
+    <span class="loader-ring loader-ring-inner"></span>
+
+    <img
+      src="Berkut_logo_black.png"
+      alt=""
+      width="120"
+      height="120"
+    >
+  </div>
+</div>
+
+<script src="loader.js"></script>
+
+<header class="club-header">
+  <div class="club-header-top">
+    <div class="club-brand">
+  <span>BERKUT PRAHA</span>
+
+  <div class="club-achievements">
+    <img
+      src="Cup_2025.png"
+      alt="Vítěz PHM Cupu 2025"
+      title="Vítěz PHM Cupu 2025"
+      width="56"
+      height="84"
+    >
+  </div>
+</div>
+    <span>PHM CUP · SUPER</span>
+  </div>
+
+  <nav class="club-navigation" aria-label="Hlavní navigace">
+    <div class="club-menu club-menu-left">
+      <a href="index.html" aria-current="page">Domů</a>
+      <a href="tym.html">Tým</a>
+    </div>
+
+    <a
+      href="index.html"
+      class="club-logo-link"
+      aria-label="Berkut Praha, úvodní stránka">
+      <img
+        src="Berkut_logo_black.png"
+        alt=""
+        width="130"
+        height="130"
+      >
+    </a>
+
+    <div class="club-menu club-menu-right">
+      <a href="klub.html">Klub</a>
+      <a href="sponzori.html">Sponzoři</a>
+      <a href="shop.html">Shop</a>
+    </div>
+  </nav>
+</header>
+
+  <main>
+
+    <p id="data-status">Načítání dat z PHM…</p>
+
+<section class="next-game-hero" aria-labelledby="next-game-title">
+  <div class="hero-topline">
+    <h2 id="next-game-title">Příští zápas</h2>
+    <span class="hero-league">PHM CUP · SUPER</span>
+  </div>
+  <h3 id="next-opponent" class="visually-hidden">Načítání soupeře…</h3>
+
+  <div class="hero-matchup" id="hero-matchup" hidden>
+    <div class="hero-team">
+      <span class="hero-side">Domácí</span>
+      <div class="hero-logo-frame">
+        <img id="hero-home-logo" alt="" hidden>
+        <span id="hero-home-fallback" class="hero-monogram" aria-hidden="true"></span>
+      </div>
+      <h3 id="hero-home-name"></h3>
+    </div>
+    <span class="hero-vs" aria-hidden="true">VS</span>
+    <div class="hero-team">
+      <span class="hero-side">Hosté</span>
+      <div class="hero-logo-frame">
+        <img id="hero-away-logo" alt="" hidden>
+        <span id="hero-away-fallback" class="hero-monogram" aria-hidden="true"></span>
+      </div>
+      <h3 id="hero-away-name"></h3>
+    </div>
+  </div>
+  <p id="hero-message" role="status">Načítání zápasu…</p>
+
+  <div class="hero-game-details">
+    <div class="hero-kickoff"><time id="next-date">Načítání…</time><span id="next-time"></span></div>
+    <p id="next-venue">Načítání stadionu…</p>
+  </div>
+
+  <p id="countdown" class="visually-hidden" role="timer">Načítání odpočtu…</p>
+  <div id="hero-countdown" class="hero-countdown" aria-hidden="true" hidden>
+    <div><strong id="hero-days">00</strong><span>Dny</span></div>
+    <div><strong id="hero-hours">00</strong><span>Hodiny</span></div>
+    <div><strong id="hero-minutes">00</strong><span>Minuty</span></div>
+    <div><strong id="hero-seconds">00</strong><span>Sekundy</span></div>
+  </div>
+
+  <div class="hero-actions">
+    <a id="arena-map" class="hero-action" target="_blank" rel="noopener noreferrer" hidden>Zobrazit na mapě ↗</a>
+    <button id="hero-calendar" class="hero-action hero-action-primary" type="button" hidden>Přidat do kalendáře</button>
+  </div>
+  <a class="hero-league-link" href="https://www.phmcup.cz/rozpis-vysledky/" target="_blank" rel="noopener noreferrer">Web ligy ↗</a>
+</section>
+
+<section aria-labelledby="schedule-heading">
+  <h2 id="schedule-heading">Rozpis a výsledky</h2>
+
+  <div id="match-highlights" class="match-highlights" aria-live="polite">
+    <p>Načítání zápasů…</p>
+  </div>
+
+  <button id="toggle-games" class="calendar-toggle" type="button"
+          aria-expanded="false" aria-controls="full-schedule">
+    Všechny zápasy
+  </button>
+
+  <div id="full-schedule" hidden>
+    <h3>Celý rozpis sezóny</h3>
+    <div class="schedule-tabs">
+      <button id="show-future" type="button" aria-pressed="true">Budoucí</button>
+      <button id="show-past" type="button" aria-pressed="false">Minulé</button>
+    </div>
+    <div id="game-list" aria-live="polite">Načítání zápasů…</div>
+  </div>
+</section>
+
+<section>
+  <h2>Tabulky · SUPER</h2>
+
+  <div class="schedule-tabs">
+    <button id="show-teams" type="button" aria-pressed="true">
+      Tabulka týmů
+    </button>
+
+    <button id="show-players" type="button" aria-pressed="false">
+      Kanadské bodování
+    </button>
+  </div>
+
+  <div id="teams-panel">
+    <p id="standings-status">Načítání tabulky…</p>
+
+    <div class="table-scroll">
+      <table class="league-table">
+        <thead>
+          <tr>
+            <th scope="col">Tým</th>
+            <th scope="col">Z</th>
+            <th scope="col">V</th>
+            <th scope="col">R</th>
+            <th scope="col">P</th>
+            <th scope="col">Skóre</th>
+            <th scope="col">Body</th>
+          </tr>
+        </thead>
+        <tbody id="standings-body"></tbody>
+      </table>
+    </div>
+
+    <p class="table-legend">
+      Z: zápasy · V: výhry · R: remízy · P: prohry
+    </p>
+  </div>
+
+  <div id="players-panel" hidden>
+    <label for="players-filter">Zobrazit hráče:</label>
+
+    <select id="players-filter">
+      <option value="league">Celá liga</option>
+      <option value="berkut">Pouze Berkut</option>
+    </select>
+
+    <p id="players-status">Načítání hráčů…</p>
+
+    <div class="table-scroll">
+      <table class="league-table">
+        <thead>
+          <tr>
+            <th scope="col">Hráč</th>
+            <th scope="col">Tým</th>
+            <th scope="col" id="player-position-heading" hidden>Pozice</th>
+            <th scope="col">Z</th>
+            <th scope="col">G</th>
+            <th scope="col">A</th>
+            <th scope="col">Body</th>
+          </tr>
+        </thead>
+        <tbody id="players-body"></tbody>
+      </table>
+    </div>
+
+    <p class="table-legend">
+      Z: zápasy · G: góly · A: asistence
+    </p>
+
+    <button id="more-players" type="button" hidden>
+      Zobrazit všechny hráče
+    </button>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="club-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img
+        src="Berkut_logo_black.png"
+        alt=""
+        width="72"
+        height="72"
+      >
+      <div>
+        <strong>BERKUT PRAHA</strong>
+        <p>Hokejový klub · PHM CUP · SUPER</p>
+      </div>
+    </div>
+
+    <nav class="footer-links" aria-label="Navigace v zápatí">
+      <a href="index.html">Domů</a>
+<a href="tym.html">Tým</a>
+<a href="klub.html">Klub</a>
+<a href="sponzori.html">Sponzoři</a>
+
+      <a
+        href="https://www.instagram.com/berkutpraha/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Instagram ↗</a>
+    </nav>
+
+    <div class="footer-bottom">
+      <span>© Berkut Praha</span>
+      <a
+        href="https://www.instagram.com/berkutpraha/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Kontaktuj nás přes Instagram ↗</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+  <script src="next-game.js"></script>
+</body>
+</html>
